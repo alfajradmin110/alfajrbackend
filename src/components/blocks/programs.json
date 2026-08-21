@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_programs",
+  "info": {
+    "displayName": "Programs",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "programs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::program.program"
+    }
+  },
+  "config": {}
+}

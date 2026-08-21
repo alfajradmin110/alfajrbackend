@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_menus",
+  "info": {
+    "displayName": "Menu",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::section.section"
+    }
+  },
+  "config": {}
+}
