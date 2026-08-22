@@ -5540,6 +5540,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     cloudinary: "npm:^2.10.0"
+    esbuild: "npm:^0.28.2"
     mysql2: "npm:3.20.0"
     next-cloudinary: "npm:^6.18.8"
     react: "npm:^18.0.0"
@@ -7390,7 +7391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.28.1":
+"esbuild@npm:^0.28.1, esbuild@npm:^0.28.2":
   version: 0.28.2
   resolution: "esbuild@npm:0.28.2"
   dependencies:

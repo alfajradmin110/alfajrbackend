@@ -21,6 +21,7 @@
     "@strapi/provider-upload-cloudinary": "^5.52.0",
     "@strapi/strapi": "5.52.0",
     "cloudinary": "^2.10.0",
+    "esbuild": "^0.28.2",
     "mysql2": "3.20.0",
     "next-cloudinary": "^6.18.8",
     "react": "^18.0.0",
