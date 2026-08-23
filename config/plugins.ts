@@ -1,7 +1,7 @@
 export default ({ env }: { env: (key: string) => string }) => ({
   'users-permissions': {
     config: {
-      jwtSecret: env('JWT_SECRET'),
+      jwtSecret: env('STRAPI_JWT'),
       jwtManagement: 'refresh',
       sessions: {
         httpOnly: true,
