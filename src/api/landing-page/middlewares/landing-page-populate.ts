@@ -32,7 +32,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 },
               },
             },
-            Swiper: {
+            swiper: {
               populate: {
                 backgroundImage: {
                   fields: [
