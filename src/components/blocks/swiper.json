@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_swipers",
+  "info": {
+    "displayName": "Swiper",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "Swiper": {
+      "type": "component",
+      "component": "shared.hero",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

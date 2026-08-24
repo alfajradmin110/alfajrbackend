@@ -14,6 +14,17 @@ export interface BlocksPrograms extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksSwiper extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_swipers';
+  info: {
+    displayName: 'Swiper';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    Swiper: Schema.Attribute.Component<'shared.hero', true>;
+  };
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: 'components_layout_footers';
   info: {
@@ -96,6 +107,7 @@ declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
       'blocks.programs': BlocksPrograms;
+      'blocks.swiper': BlocksSwiper;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
       'layout.menu': LayoutMenu;
