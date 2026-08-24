@@ -16,7 +16,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
               },
             },
           },
-          swiper: {   // <-- must be INSIDE blocks.programs's populate, sibling of "programs"
+          Swiper: {   // <-- must be INSIDE blocks.programs's populate, sibling of "programs"
             populate: {
               backgroundImage: { fields: ["url", "alternativeText", "name", "width", "height"] },
             },
