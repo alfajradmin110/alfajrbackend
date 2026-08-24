@@ -493,7 +493,9 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
       'api::landing-page.landing-page'
     > &
       Schema.Attribute.Private;
-    Programs: Schema.Attribute.DynamicZone<['blocks.programs']>;
+    Programs: Schema.Attribute.DynamicZone<
+      ['blocks.programs', 'blocks.swiper']
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
