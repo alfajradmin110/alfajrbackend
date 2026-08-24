@@ -32,6 +32,19 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 },
               },
             },
+            Swiper: {
+              populate: {
+                backgroundImage: {
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+              },
+            },
           },
         },
       },
