@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "education_levels",
+  "info": {
+    "singularName": "education-level",
+    "pluralName": "education-levels",
+    "displayName": "Education Level"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "short_courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::short-course.short-course",
+      "mappedBy": "education_levels"
+    }
+  }
+}

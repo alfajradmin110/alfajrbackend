@@ -91,6 +91,18 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedIcons extends Struct.ComponentSchema {
+  collectionName: 'components_shared_icons';
+  info: {
+    displayName: 'icons';
+    icon: 'link';
+  };
+  attributes: {
+    lucideClass: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -113,6 +125,7 @@ declare module '@strapi/strapi' {
       'layout.menu': LayoutMenu;
       'shared.accordion': SharedAccordion;
       'shared.hero': SharedHero;
+      'shared.icons': SharedIcons;
       'shared.link': SharedLink;
     }
   }
