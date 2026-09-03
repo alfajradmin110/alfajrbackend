@@ -14,6 +14,17 @@ export interface BlocksPrograms extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksSwiper extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_swipers';
+  info: {
+    displayName: 'Swiper';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    Swiper: Schema.Attribute.Component<'shared.hero', true>;
+  };
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: 'components_layout_footers';
   info: {
@@ -80,6 +91,18 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedIcons extends Struct.ComponentSchema {
+  collectionName: 'components_shared_icons';
+  info: {
+    displayName: 'icons';
+    icon: 'link';
+  };
+  attributes: {
+    lucideClass: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -96,11 +119,13 @@ declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
       'blocks.programs': BlocksPrograms;
+      'blocks.swiper': BlocksSwiper;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
       'layout.menu': LayoutMenu;
       'shared.accordion': SharedAccordion;
       'shared.hero': SharedHero;
+      'shared.icons': SharedIcons;
       'shared.link': SharedLink;
     }
   }

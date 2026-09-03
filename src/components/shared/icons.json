@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_icons",
+  "info": {
+    "displayName": "icons",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "lucideClass": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

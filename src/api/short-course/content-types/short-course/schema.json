@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "short_courses",
+  "info": {
+    "singularName": "short-course",
+    "pluralName": "short-courses",
+    "displayName": "Short Course"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "education_levels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::education-level.education-level",
+      "inversedBy": "short_courses"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "bannerImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "LucideIcon": {
+      "type": "component",
+      "component": "shared.icons",
+      "repeatable": false
+    }
+  }
+}
