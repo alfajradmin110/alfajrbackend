@@ -48,6 +48,10 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "is_with_banner": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
