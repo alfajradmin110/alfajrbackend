@@ -115,6 +115,15 @@ export interface SharedLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTags extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tags';
+  info: {
+    displayName: 'tags';
+    icon: 'apps';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
@@ -127,6 +136,7 @@ declare module '@strapi/strapi' {
       'shared.hero': SharedHero;
       'shared.icons': SharedIcons;
       'shared.link': SharedLink;
+      'shared.tags': SharedTags;
     }
   }
 }
