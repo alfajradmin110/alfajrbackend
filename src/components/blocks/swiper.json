@@ -10,6 +10,11 @@
       "type": "component",
       "component": "shared.hero",
       "repeatable": true
+    },
+    "highlights": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::highlight.highlight"
     }
   },
   "config": {}

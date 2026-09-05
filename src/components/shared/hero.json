@@ -26,6 +26,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "highlights": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::highlight.highlight"
     }
   },
   "config": {}

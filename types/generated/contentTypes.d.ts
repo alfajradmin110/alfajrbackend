@@ -506,6 +506,42 @@ export interface ApiGlobalSettingGlobalSetting extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHighlightHighlight extends Struct.CollectionTypeSchema {
+  collectionName: 'highlights';
+  info: {
+    displayName: 'Highlight';
+    pluralName: 'highlights';
+    singularName: 'highlight';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    frontImage: Schema.Attribute.Media<'images'>;
+    imageGallery: Schema.Attribute.Media<'images', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::highlight.highlight'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    summary: Schema.Attribute.Text;
+    tagcolor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+    tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -653,6 +689,10 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    highlights: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::highlight.highlight'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'> &
       Schema.Attribute.Private;
@@ -1178,6 +1218,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::education-level.education-level': ApiEducationLevelEducationLevel;
       'api::global-setting.global-setting': ApiGlobalSettingGlobalSetting;
+      'api::highlight.highlight': ApiHighlightHighlight;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::program.program': ApiProgramProgram;
       'api::section.section': ApiSectionSection;

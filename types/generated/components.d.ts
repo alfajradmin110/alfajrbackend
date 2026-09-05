@@ -21,6 +21,10 @@ export interface BlocksSwiper extends Struct.ComponentSchema {
     icon: 'chartBubble';
   };
   attributes: {
+    highlights: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::highlight.highlight'
+    >;
     Swiper: Schema.Attribute.Component<'shared.hero', true>;
   };
 }
@@ -85,6 +89,10 @@ export interface SharedHero extends Struct.ComponentSchema {
     backgroundImage: Schema.Attribute.Media<'images'>;
     ctaText: Schema.Attribute.String;
     ctaUrl: Schema.Attribute.String;
+    highlights: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::highlight.highlight'
+    >;
     subtitle: Schema.Attribute.String;
     summary: Schema.Attribute.Text;
     title: Schema.Attribute.String;

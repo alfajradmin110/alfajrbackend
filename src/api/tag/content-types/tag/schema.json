@@ -17,6 +17,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "highlights": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::highlight.highlight",
+      "mappedBy": "tags"
     }
   }
 }
