@@ -15,7 +15,8 @@
       "type": "dynamiczone",
       "components": [
         "blocks.programs",
-        "blocks.swiper"
+        "blocks.swiper",
+        "blocks.message"
       ]
     }
   }

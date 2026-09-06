@@ -563,7 +563,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     Programs: Schema.Attribute.DynamicZone<
-      ['blocks.programs', 'blocks.swiper']
+      ['blocks.programs', 'blocks.swiper', 'blocks.message']
     >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
