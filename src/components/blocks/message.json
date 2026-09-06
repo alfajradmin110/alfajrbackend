@@ -15,6 +15,9 @@
     "jobtitle": {
       "type": "string"
     },
+    "organization": {
+      "type": "string"
+    },
     "message": {
       "type": "blocks"
     },

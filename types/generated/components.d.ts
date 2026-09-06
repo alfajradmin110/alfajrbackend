@@ -11,6 +11,7 @@ export interface BlocksMessage extends Struct.ComponentSchema {
     jobtitle: Schema.Attribute.String;
     message: Schema.Attribute.Blocks;
     name: Schema.Attribute.String;
+    organization: Schema.Attribute.String;
     slug: Schema.Attribute.String;
   };
 }
