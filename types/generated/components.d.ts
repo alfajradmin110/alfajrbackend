@@ -10,6 +10,8 @@ export interface BlocksMessage extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     jobtitle: Schema.Attribute.String;
     message: Schema.Attribute.Blocks;
+    messagesubtitle: Schema.Attribute.String;
+    messagetitle: Schema.Attribute.String;
     name: Schema.Attribute.String;
     organization: Schema.Attribute.String;
     page_url: Schema.Attribute.String;
