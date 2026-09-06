@@ -17,7 +17,6 @@ export default (config: any, { strapi }: { strapi: any }) => {
                     "height",
                   ],
                 },
-
                 Banner: {
                   populate: {
                     backgroundImage: {
@@ -67,8 +66,12 @@ export default (config: any, { strapi }: { strapi: any }) => {
               },
               fields: ["title", "slug"],
             },
+          },
+        },
 
-            // new relation
+        // NEW — separate component block, sibling of blocks.swiper
+        "blocks.message": {
+          populate: {
             messages: {
               populate: {
                 image: {
@@ -80,7 +83,6 @@ export default (config: any, { strapi }: { strapi: any }) => {
                     "height",
                   ],
                 },
-                message: true, // Rich text (Blocks) — returns the blocks JSON as-is
               },
               fields: [
                 "name",
@@ -89,6 +91,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 "organization",
                 "messagetitle",
                 "messagesubtitle",
+                "message",
               ],
             },
           },
