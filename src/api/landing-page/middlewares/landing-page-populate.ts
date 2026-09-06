@@ -40,7 +40,6 @@ export default (config: any, { strapi }: { strapi: any }) => {
           populate: {
             Swiper: {
               populate: {
-                // Swiper background image
                 backgroundImage: {
                   fields: [
                     "url",
@@ -53,10 +52,8 @@ export default (config: any, { strapi }: { strapi: any }) => {
               },
             },
 
-            // Highlights relation — sibling of Swiper, not nested inside it
             highlights: {
               populate: {
-                // Highlight front image
                 frontImage: {
                   fields: [
                     "url",
@@ -66,13 +63,33 @@ export default (config: any, { strapi }: { strapi: any }) => {
                     "height",
                   ],
                 },
-
-                // Highlight tags relation
                 tags: true,
               },
-
-              // Explicitly select fields on the highlight itself
               fields: ["title", "slug"],
+            },
+
+            // new relation
+            messages: {
+              populate: {
+                image: {
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+                message: true, // Rich text (Blocks) — returns the blocks JSON as-is
+              },
+              fields: [
+                "name",
+                "slug",
+                "jobtitle",
+                "organization",
+                "messagetitle",
+                "messagesubtitle",
+              ],
             },
           },
         },
