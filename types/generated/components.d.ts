@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksMessage extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_messages';
+  info: {
+    displayName: 'Message';
+    icon: 'pencil';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    jobtitle: Schema.Attribute.String;
+    message: Schema.Attribute.Blocks;
+    name: Schema.Attribute.String;
+    slug: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksPrograms extends Struct.ComponentSchema {
   collectionName: 'components_blocks_programs';
   info: {
@@ -135,6 +150,7 @@ export interface SharedTags extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'blocks.message': BlocksMessage;
       'blocks.programs': BlocksPrograms;
       'blocks.swiper': BlocksSwiper;
       'layout.footer': LayoutFooter;
