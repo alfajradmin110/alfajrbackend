@@ -23,6 +23,12 @@
       "relation": "manyToMany",
       "target": "api::highlight.highlight",
       "mappedBy": "tags"
+    },
+    "short_courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::short-course.short-course",
+      "mappedBy": "tags"
     }
   }
 }
