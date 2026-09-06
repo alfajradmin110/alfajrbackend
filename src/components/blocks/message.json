@@ -1,38 +1,14 @@
 {
   "collectionName": "components_blocks_messages",
   "info": {
-    "displayName": "Message",
-    "icon": "pencil"
+    "displayName": "Message"
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "page_url": {
-      "type": "string"
-    },
-    "jobtitle": {
-      "type": "string"
-    },
-    "organization": {
-      "type": "string"
-    },
-    "messagetitle": {
-      "type": "string"
-    },
-    "messagesubtitle": {
-      "type": "string"
-    },
-    "message": {
-      "type": "blocks"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message"
     }
   },
   "config": {}

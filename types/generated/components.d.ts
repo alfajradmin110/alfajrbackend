@@ -4,17 +4,9 @@ export interface BlocksMessage extends Struct.ComponentSchema {
   collectionName: 'components_blocks_messages';
   info: {
     displayName: 'Message';
-    icon: 'pencil';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images'>;
-    jobtitle: Schema.Attribute.String;
-    message: Schema.Attribute.Blocks;
-    messagesubtitle: Schema.Attribute.String;
-    messagetitle: Schema.Attribute.String;
-    name: Schema.Attribute.String;
-    organization: Schema.Attribute.String;
-    page_url: Schema.Attribute.String;
+    messages: Schema.Attribute.Relation<'oneToMany', 'api::message.message'>;
   };
 }
 
