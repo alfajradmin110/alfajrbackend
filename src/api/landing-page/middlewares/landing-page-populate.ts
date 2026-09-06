@@ -9,12 +9,25 @@ export default (config: any, { strapi }: { strapi: any }) => {
             programs: {
               populate: {
                 images: {
-                  fields: ["url", "alternativeText", "name", "width", "height"],
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
                 },
+
                 Banner: {
                   populate: {
                     backgroundImage: {
-                      fields: ["url", "alternativeText", "name", "width", "height"],
+                      fields: [
+                        "url",
+                        "alternativeText",
+                        "name",
+                        "width",
+                        "height",
+                      ],
                     },
                   },
                 },
@@ -22,13 +35,46 @@ export default (config: any, { strapi }: { strapi: any }) => {
             },
           },
         },
+
         "blocks.swiper": {
           populate: {
             Swiper: {
               populate: {
+                // Swiper background image
                 backgroundImage: {
-                      fields: ["url", "alternativeText", "name", "width", "height"],
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+
+                // Highlights relation
+                highlights: {
+                  populate: {
+                    // Highlight front image
+                    frontImage: {
+                      fields: [
+                        "url",
+                        "alternativeText",
+                        "name",
+                        "width",
+                        "height",
+                      ],
                     },
+
+                    // Highlight tags relation
+                    tags: true,
+                  },
+
+                  // Optional: explicitly select fields
+                  fields: [
+                    "title",
+                    "slug",
+                  ],
+                },
               },
             },
           },
@@ -44,11 +90,13 @@ export default (config: any, { strapi }: { strapi: any }) => {
     if (ctx.query.status == null) {
       ctx.query.status = "published";
     }
+
     if (ctx.query.locale == null) {
       ctx.query.locale = ["en"];
     }
 
     strapi.log.info("In landing-page-populate middleware.");
+
     await next();
   };
 };
