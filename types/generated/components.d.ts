@@ -12,7 +12,7 @@ export interface BlocksMessage extends Struct.ComponentSchema {
     message: Schema.Attribute.Blocks;
     name: Schema.Attribute.String;
     organization: Schema.Attribute.String;
-    slug: Schema.Attribute.String;
+    page_url: Schema.Attribute.String;
   };
 }
 
