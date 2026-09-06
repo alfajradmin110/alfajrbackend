@@ -50,32 +50,29 @@ export default (config: any, { strapi }: { strapi: any }) => {
                     "height",
                   ],
                 },
+              },
+            },
 
-                // Highlights relation
-                highlights: {
-                  populate: {
-                    // Highlight front image
-                    frontImage: {
-                      fields: [
-                        "url",
-                        "alternativeText",
-                        "name",
-                        "width",
-                        "height",
-                      ],
-                    },
-
-                    // Highlight tags relation
-                    tags: true,
-                  },
-
-                  // Optional: explicitly select fields
+            // Highlights relation — sibling of Swiper, not nested inside it
+            highlights: {
+              populate: {
+                // Highlight front image
+                frontImage: {
                   fields: [
-                    "title",
-                    "slug",
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
                   ],
                 },
+
+                // Highlight tags relation
+                tags: true,
               },
+
+              // Explicitly select fields on the highlight itself
+              fields: ["title", "slug"],
             },
           },
         },
