@@ -1,5 +1,22 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksAchievements extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_achievements';
+  info: {
+    displayName: 'Achievements';
+    icon: 'arrowUp';
+  };
+  attributes: {
+    achievements: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::achievement.achievement'
+    >;
+    heading: Schema.Attribute.String;
+    subheading: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+  };
+}
+
 export interface BlocksAnnouncement extends Struct.ComponentSchema {
   collectionName: 'components_blocks_announcements';
   info: {
@@ -187,6 +204,7 @@ export interface SharedTags extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'blocks.achievements': BlocksAchievements;
       'blocks.announcement': BlocksAnnouncement;
       'blocks.highlights': BlocksHighlights;
       'blocks.message': BlocksMessage;

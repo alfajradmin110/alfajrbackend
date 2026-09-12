@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_achievements",
+  "info": {
+    "displayName": "Achievements",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "achievements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::achievement.achievement"
+    }
+  },
+  "config": {}
+}
