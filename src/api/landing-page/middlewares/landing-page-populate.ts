@@ -113,20 +113,27 @@ export default (config: any, { strapi }: { strapi: any }) => {
 
                 tags: true,
 
-                education_levels: "*",
+                education_levels: {
+                  fields: ["title", "slug"], // adjust once you confirm Education Level's actual fields
+                },
 
-                LucideIcon: "*",
+                LucideIcon: {
+                  fields: ["title", "lucideClass"],
+                },
               },
 
               fields: [
                 "title",
                 "summary",
+                "description",
                 "duration",
                 "mostpopular",
               ],
             },
           },
         },
+
+        //SHORT COURSES END
       },
     },
   };
