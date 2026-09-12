@@ -99,29 +99,33 @@ export default (config: any, { strapi }: { strapi: any }) => {
         // Short Courses
         "blocks.short-courses": {
           populate: {
-            bannerImage: {
+            short_courses: {
+              populate: {
+                bannerImage: {
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+
+                tags: true,
+
+                education_levels: "*",
+
+                LucideIcon: "*",
+              },
+
               fields: [
-                "url",
-                "alternativeText",
-                "name",
-                "width",
-                "height",
+                "title",
+                "summary",
+                "duration",
+                "mostpopulat",
               ],
             },
-
-            tags: true,
-
-            education_levels: "*",
-
-            LucideIcon: "*",
           },
-
-          fields: [
-            "title",
-            "summary",
-            "duration",
-            "mostpopulat",
-          ],
         },
       },
     },
