@@ -69,7 +69,6 @@ export default (config: any, { strapi }: { strapi: any }) => {
           },
         },
 
-        // NEW — separate component block, sibling of blocks.swiper
         "blocks.message": {
           populate: {
             messages: {
@@ -95,6 +94,34 @@ export default (config: any, { strapi }: { strapi: any }) => {
               ],
             },
           },
+        },
+
+        // Short Courses
+        "blocks.short-courses": {
+          populate: {
+            bannerImage: {
+              fields: [
+                "url",
+                "alternativeText",
+                "name",
+                "width",
+                "height",
+              ],
+            },
+
+            tags: true,
+
+            education_levels: "*",
+
+            LucideIcon: "*",
+          },
+
+          fields: [
+            "title",
+            "summary",
+            "duration",
+            "mostpopulat",
+          ],
         },
       },
     },
