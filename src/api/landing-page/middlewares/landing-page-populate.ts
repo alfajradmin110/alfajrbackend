@@ -114,7 +114,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 tags: true,
 
                 education_levels: {
-                  fields: ["title", "slug"], // adjust once you confirm Education Level's actual fields
+                  fields: ["title"], // adjust once you confirm Education Level's actual fields
                 },
 
                 LucideIcon: {
