@@ -178,7 +178,9 @@ export default (config: any, { strapi }: { strapi: any }) => {
         },
         "blocks.announcement": {
           populate: {
-            announcements: "*",
+            announcements: {
+              fields: ["title", "page_url"],
+            },
           },
         },
       },
