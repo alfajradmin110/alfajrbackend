@@ -114,7 +114,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 tags: true,
 
                 education_levels: {
-                  fields: ["title"], // adjust once you confirm Education Level's actual fields
+                  fields: ["title"],
                 },
 
                 LucideIcon: {
@@ -132,8 +132,50 @@ export default (config: any, { strapi }: { strapi: any }) => {
             },
           },
         },
-
         //SHORT COURSES END
+
+        // Main Highlights section
+        "blocks.highlights": {
+          populate: {
+            highlights: {
+              populate: {
+                frontImage: {
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+
+                tags: true,
+
+                imageGallery: {
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+              },
+
+              fields: [
+                "title",
+                "slug",
+                "summary",
+                "themeColor",
+              ],
+            },
+          },
+
+          // heading, subheading, summary are plain fields on the component itself,
+          // so they come back automatically — no need to list them explicitly
+          // unless you're restricting fields elsewhere in the query.
+        },
+        //MAIN HIGHLIGHTS END
       },
     },
   };
