@@ -568,6 +568,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'blocks.swiper',
         'blocks.message',
         'blocks.short-courses',
+        'blocks.highlights',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;

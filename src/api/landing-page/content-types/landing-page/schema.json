@@ -17,7 +17,8 @@
         "blocks.programs",
         "blocks.swiper",
         "blocks.message",
-        "blocks.short-courses"
+        "blocks.short-courses",
+        "blocks.highlights"
       ]
     }
   }
