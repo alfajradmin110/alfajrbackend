@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_short_courses",
+  "info": {
+    "displayName": "Short Courses"
+  },
+  "options": {},
+  "attributes": {
+    "short_courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::short-course.short-course"
+    }
+  },
+  "config": {}
+}

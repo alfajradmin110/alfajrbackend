@@ -24,6 +24,19 @@ export interface BlocksPrograms extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksShortCourses extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_short_courses';
+  info: {
+    displayName: 'Short Courses';
+  };
+  attributes: {
+    short_courses: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::short-course.short-course'
+    >;
+  };
+}
+
 export interface BlocksSwiper extends Struct.ComponentSchema {
   collectionName: 'components_blocks_swipers';
   info: {
@@ -147,6 +160,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blocks.message': BlocksMessage;
       'blocks.programs': BlocksPrograms;
+      'blocks.short-courses': BlocksShortCourses;
       'blocks.swiper': BlocksSwiper;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;

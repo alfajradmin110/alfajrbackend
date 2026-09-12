@@ -16,7 +16,8 @@
       "components": [
         "blocks.programs",
         "blocks.swiper",
-        "blocks.message"
+        "blocks.message",
+        "blocks.short-courses"
       ]
     }
   }
