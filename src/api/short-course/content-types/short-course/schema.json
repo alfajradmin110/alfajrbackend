@@ -51,7 +51,7 @@
       "target": "api::tag.tag",
       "inversedBy": "short_courses"
     },
-    "mostpopular": {
+    "isFeatured": {
       "type": "boolean",
       "default": false
     },

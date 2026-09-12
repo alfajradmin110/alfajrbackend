@@ -698,6 +698,7 @@ export interface ApiShortCourseShortCourse extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::education-level.education-level'
     >;
+    isFeatured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -705,7 +706,6 @@ export interface ApiShortCourseShortCourse extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     LucideIcon: Schema.Attribute.Component<'shared.icons', false>;
-    mostpopular: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     summary: Schema.Attribute.Text;
