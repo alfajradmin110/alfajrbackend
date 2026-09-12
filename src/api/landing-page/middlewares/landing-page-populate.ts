@@ -166,6 +166,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 "title",
                 "slug",
                 "summary",
+                "createdAt",
                 "themeColor",
               ],
             },
