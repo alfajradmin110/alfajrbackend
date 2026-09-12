@@ -122,7 +122,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 "title",
                 "summary",
                 "duration",
-                "mostpopulat",
+                "mostpopular",
               ],
             },
           },
