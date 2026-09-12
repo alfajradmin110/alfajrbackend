@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_announcements",
+  "info": {
+    "displayName": "Announcement"
+  },
+  "options": {},
+  "attributes": {
+    "announcements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::announcement.announcement"
+    }
+  },
+  "config": {}
+}

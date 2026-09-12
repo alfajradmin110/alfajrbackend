@@ -18,7 +18,8 @@
         "blocks.swiper",
         "blocks.message",
         "blocks.short-courses",
-        "blocks.highlights"
+        "blocks.highlights",
+        "blocks.announcement"
       ]
     }
   }
