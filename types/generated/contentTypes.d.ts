@@ -710,6 +710,8 @@ export interface ApiShortCourseShortCourse extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'title'>;
     summary: Schema.Attribute.Text;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
+    themeColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
