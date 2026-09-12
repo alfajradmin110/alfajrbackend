@@ -50,6 +50,10 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "short_courses"
+    },
+    "mostpopular": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

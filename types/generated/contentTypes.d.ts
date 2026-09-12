@@ -700,6 +700,7 @@ export interface ApiShortCourseShortCourse extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     LucideIcon: Schema.Attribute.Component<'shared.icons', false>;
+    mostpopular: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     summary: Schema.Attribute.Text;
