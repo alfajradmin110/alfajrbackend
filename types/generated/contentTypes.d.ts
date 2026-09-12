@@ -532,9 +532,9 @@ export interface ApiHighlightHighlight extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     summary: Schema.Attribute.Text;
-    tagcolor: Schema.Attribute.String &
-      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
+    themeColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

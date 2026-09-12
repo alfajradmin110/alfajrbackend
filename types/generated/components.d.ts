@@ -1,5 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksHighlights extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_highlights';
+  info: {
+    displayName: 'Highlights';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    highlights: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::highlight.highlight'
+    >;
+    subheading: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+  };
+}
+
 export interface BlocksMessage extends Struct.ComponentSchema {
   collectionName: 'components_blocks_messages';
   info: {
@@ -158,6 +174,7 @@ export interface SharedTags extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'blocks.highlights': BlocksHighlights;
       'blocks.message': BlocksMessage;
       'blocks.programs': BlocksPrograms;
       'blocks.short-courses': BlocksShortCourses;
