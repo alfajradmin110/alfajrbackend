@@ -176,7 +176,11 @@ export default (config: any, { strapi }: { strapi: any }) => {
           // so they come back automatically — no need to list them explicitly
           // unless you're restricting fields elsewhere in the query.
         },
-        //MAIN HIGHLIGHTS END
+        "blocks.announcement": {
+          populate: {
+            announcements: "*",
+          },
+        },
       },
     },
   };
