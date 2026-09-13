@@ -20,7 +20,8 @@
         "blocks.short-courses",
         "blocks.highlights",
         "blocks.announcement",
-        "blocks.achievements"
+        "blocks.achievements",
+        "blocks.features"
       ]
     }
   }
