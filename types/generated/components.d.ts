@@ -30,6 +30,22 @@ export interface BlocksAnnouncement extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_features';
+  info: {
+    displayName: 'Features';
+    icon: 'apps';
+  };
+  attributes: {
+    Features: Schema.Attribute.Component<'shared.accordion', true>;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    Stats: Schema.Attribute.Component<'shared.accordion', true>;
+    subheading: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+  };
+}
+
 export interface BlocksHighlights extends Struct.ComponentSchema {
   collectionName: 'components_blocks_highlights';
   info: {
@@ -206,6 +222,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blocks.achievements': BlocksAchievements;
       'blocks.announcement': BlocksAnnouncement;
+      'blocks.features': BlocksFeatures;
       'blocks.highlights': BlocksHighlights;
       'blocks.message': BlocksMessage;
       'blocks.programs': BlocksPrograms;

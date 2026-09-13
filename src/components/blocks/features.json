@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_blocks_features",
+  "info": {
+    "displayName": "Features",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Stats": {
+      "type": "component",
+      "component": "shared.accordion",
+      "repeatable": true
+    },
+    "Features": {
+      "type": "component",
+      "component": "shared.accordion",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
