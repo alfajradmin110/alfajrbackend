@@ -8,45 +8,6 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
   const myPopulate = {
     blocks: {
       on: {
-        'blocks.hero-section': {
-          populate: {
-            Hero: {
-              populate: {
-                icon: {
-                  fields: ['url', 'alternativeText', 'name'],
-                },
-                backgroundImage: {
-                  fields: ['url', 'alternativeText', 'name'],
-                },
-                image: {
-                  fields: ['url', 'alternativeText', 'name'],
-                },
-                images: {
-                  fields: ['url', 'alternativeText', 'name'],
-                },
-              },
-            },
-          },
-        },
-
-        'blocks.services': {
-          populate: {
-            services: {
-              populate: {
-                serviceIcon: {
-                  fields: ['url', 'alternativeText', 'name', 'width', 'height'],
-                },
-                images: {
-                  fields: ['url', 'alternativeText', 'name', 'width', 'height'],
-                },
-                frontImage: {
-                  fields: ['url', 'alternativeText', 'name', 'width', 'height'],
-                },
-              },
-            },
-          },
-        },
-
         // Chairman message / any generic "message" block reused across pages
         'blocks.message': {
           populate: {
@@ -69,25 +30,6 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
             },
           },
         },
-
-        'shared.seo': {
-          populate: {
-            metaImage: {
-              fields: ['url', 'alternativeText', 'name'],
-            },
-            openGraph: {
-              populate: {
-                ogImage: {
-                  fields: ['url', 'alternativeText', 'name'],
-                },
-              },
-            },
-          },
-        },
-
-        'blocks.contact': '*',
-        'blocks.textbox': '*',
-        'blocks.map': '*',
       },
     },
   };
