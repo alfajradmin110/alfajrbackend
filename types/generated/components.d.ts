@@ -159,8 +159,10 @@ export interface SharedAccordion extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    icon: Schema.Attribute.Media<'images'>;
+    lucideIcon: Schema.Attribute.String;
     summary: Schema.Attribute.Text;
+    themeColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     title: Schema.Attribute.String;
   };
 }
