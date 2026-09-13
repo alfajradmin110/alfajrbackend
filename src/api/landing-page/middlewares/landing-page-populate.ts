@@ -171,11 +171,9 @@ export default (config: any, { strapi }: { strapi: any }) => {
               ],
             },
           },
-
-          // heading, subheading, summary are plain fields on the component itself,
-          // so they come back automatically — no need to list them explicitly
-          // unless you're restricting fields elsewhere in the query.
         },
+        //HIGHLIGHTS END
+
         "blocks.announcement": {
           populate: {
             announcements: {
@@ -183,6 +181,50 @@ export default (config: any, { strapi }: { strapi: any }) => {
             },
           },
         },
+        //ANNOUNCEMENT END
+
+        // Achievements section
+        "blocks.achievements": {
+          populate: {
+            achievements: {
+              populate: {
+                frontImage: {
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+
+                gallery: {
+                  fields: [
+                    "url",
+                    "alternativeText",
+                    "name",
+                    "width",
+                    "height",
+                  ],
+                },
+              },
+
+              fields: [
+                "title",
+                "slug",
+                "achiever_name",
+                "achiever_class",
+                "summary",
+                "themeColor",
+                "createdAt",
+              ],
+            },
+          },
+
+          // heading, subheading, summary are plain fields on the component
+          // itself and come back automatically — no need to list them.
+        },
+        //ACHIEVEMENTS END
       },
     },
   };
