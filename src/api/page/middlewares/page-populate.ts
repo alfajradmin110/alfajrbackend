@@ -25,7 +25,7 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
                 'messagetitle',
                 'messagesubtitle',
                 'message',
-                'page_url',
+               
               ],
             },
           },
