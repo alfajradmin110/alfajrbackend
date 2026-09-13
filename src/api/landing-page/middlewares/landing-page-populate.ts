@@ -110,18 +110,14 @@ export default (config: any, { strapi }: { strapi: any }) => {
                     "height",
                   ],
                 },
-
                 tags: true,
-
                 education_levels: {
                   fields: ["title"],
                 },
-
                 LucideIcon: {
                   fields: ["title", "lucideClass"],
                 },
               },
-
               fields: [
                 "title",
                 "summary",
@@ -148,9 +144,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                     "height",
                   ],
                 },
-
                 tags: true,
-
                 imageGallery: {
                   fields: [
                     "url",
@@ -161,7 +155,6 @@ export default (config: any, { strapi }: { strapi: any }) => {
                   ],
                 },
               },
-
               fields: [
                 "title",
                 "slug",
@@ -197,7 +190,6 @@ export default (config: any, { strapi }: { strapi: any }) => {
                     "height",
                   ],
                 },
-
                 gallery: {
                   fields: [
                     "url",
@@ -208,7 +200,6 @@ export default (config: any, { strapi }: { strapi: any }) => {
                   ],
                 },
               },
-
               fields: [
                 "title",
                 "slug",
@@ -220,11 +211,38 @@ export default (config: any, { strapi }: { strapi: any }) => {
               ],
             },
           },
-
-          // heading, subheading, summary are plain fields on the component
-          // itself and come back automatically — no need to list them.
         },
         //ACHIEVEMENTS END
+
+        // Why ALFAJR / Features section
+        "blocks.features": {
+          populate: {
+            image: {
+              fields: [
+                "url",
+                "alternativeText",
+                "name",
+                "width",
+                "height",
+              ],
+            },
+
+            Stats: {
+              populate: "*",
+              // Stats is a component (not a relation), so a plain "*" is
+              // safe here — it has no relation fields to circularly expand,
+              // just scalar fields (title, summary, lucideIcon, themeColor).
+            },
+
+            Features: {
+              populate: "*",
+            },
+          },
+
+          // heading, subheading, summary are plain fields on the component
+          // itself and come back automatically.
+        },
+        //FEATURES END
       },
     },
   };
