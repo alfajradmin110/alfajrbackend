@@ -25,15 +25,22 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
                 'messagetitle',
                 'messagesubtitle',
                 'message',
-               
+
               ],
             },
+          },
+        },
+        'blocks.contact': {
+          populate: {
+            contact: {
+              populate: "*",
+            },
+
           },
         },
       },
     },
   };
-
   return async (ctx: any, next: () => Promise<void>) => {
     ctx.query = ctx.query || {};
 
