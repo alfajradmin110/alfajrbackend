@@ -30,6 +30,17 @@ export interface BlocksAnnouncement extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksBanner extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_banners';
+  info: {
+    displayName: 'Banner';
+    icon: 'picture';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
 export interface BlocksContact extends Struct.ComponentSchema {
   collectionName: 'components_blocks_contacts';
   info: {
@@ -38,7 +49,9 @@ export interface BlocksContact extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
+    email: Schema.Attribute.String;
     map: Schema.Attribute.Text;
+    phone: Schema.Attribute.String;
   };
 }
 
@@ -236,6 +249,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blocks.achievements': BlocksAchievements;
       'blocks.announcement': BlocksAnnouncement;
+      'blocks.banner': BlocksBanner;
       'blocks.contact': BlocksContact;
       'blocks.features': BlocksFeatures;
       'blocks.highlights': BlocksHighlights;

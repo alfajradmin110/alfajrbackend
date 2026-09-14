@@ -11,6 +11,12 @@
     },
     "map": {
       "type": "text"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   },
   "config": {}
