@@ -30,6 +30,18 @@ export interface BlocksAnnouncement extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksContact extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_contacts';
+  info: {
+    displayName: 'Contact';
+    icon: 'pinMap';
+  };
+  attributes: {
+    address: Schema.Attribute.Text;
+    map: Schema.Attribute.Text;
+  };
+}
+
 export interface BlocksFeatures extends Struct.ComponentSchema {
   collectionName: 'components_blocks_features';
   info: {
@@ -224,6 +236,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blocks.achievements': BlocksAchievements;
       'blocks.announcement': BlocksAnnouncement;
+      'blocks.contact': BlocksContact;
       'blocks.features': BlocksFeatures;
       'blocks.highlights': BlocksHighlights;
       'blocks.message': BlocksMessage;

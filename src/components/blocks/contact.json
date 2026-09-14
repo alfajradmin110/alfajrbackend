@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "text"
+    },
+    "map": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

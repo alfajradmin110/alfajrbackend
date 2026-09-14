@@ -17,8 +17,8 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "shared.accordion",
-        "blocks.message"
+        "blocks.message",
+        "blocks.contact"
       ]
     }
   }
