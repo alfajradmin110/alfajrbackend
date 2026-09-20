@@ -1,5 +1,5 @@
 import type { Core } from '@strapi/strapi';
-
+//middlewares.ts
 const config: Core.Config.Middlewares = [
   'strapi::logger',
   'strapi::errors',

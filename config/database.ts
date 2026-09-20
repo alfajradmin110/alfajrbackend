@@ -84,7 +84,7 @@ const config = ({
       useNullAsDefault: true,
     },
   };
-
+//this is the connection 11
   return {
     connection: {
       ...connections[client],
@@ -97,3 +97,4 @@ const config = ({
 };
 
 export default config;
+
