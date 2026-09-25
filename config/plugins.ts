@@ -25,4 +25,18 @@ export default ({ env }: { env: (key: string) => string }) => ({
     },
   },
   // ...
+  'tiptap-editor': {
+    config: {
+      presets: {
+        standard: {
+          bold: true,
+          italic: true,
+          // Highlight-start
+          table: true, // Enables the main Table creation utility
+          // Highlight-end
+          image: true,
+        },
+      },
+    },
+  },
 });
