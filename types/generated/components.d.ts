@@ -71,6 +71,20 @@ export interface BlocksFeatures extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksHeroText extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_hero_texts';
+  info: {
+    displayName: 'HeroText';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    heading: Schema.Attribute.String;
+    Hero: Schema.Attribute.Component<'shared.hero', true>;
+    subheading: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+  };
+}
+
 export interface BlocksHighlights extends Struct.ComponentSchema {
   collectionName: 'components_blocks_highlights';
   info: {
@@ -201,10 +215,6 @@ export interface SharedHero extends Struct.ComponentSchema {
     backgroundImage: Schema.Attribute.Media<'images'>;
     ctaText: Schema.Attribute.String;
     ctaUrl: Schema.Attribute.String;
-    highlights: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::highlight.highlight'
-    >;
     subtitle: Schema.Attribute.String;
     summary: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -252,6 +262,7 @@ declare module '@strapi/strapi' {
       'blocks.banner': BlocksBanner;
       'blocks.contact': BlocksContact;
       'blocks.features': BlocksFeatures;
+      'blocks.hero-text': BlocksHeroText;
       'blocks.highlights': BlocksHighlights;
       'blocks.message': BlocksMessage;
       'blocks.programs': BlocksPrograms;

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_hero_texts",
+  "info": {
+    "displayName": "HeroText"
+  },
+  "options": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "component": "shared.hero",
+      "repeatable": true
+    },
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
