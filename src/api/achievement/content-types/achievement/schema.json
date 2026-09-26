@@ -27,9 +27,6 @@
     "summary": {
       "type": "text"
     },
-    "description": {
-      "type": "blocks"
-    },
     "frontImage": {
       "type": "media",
       "multiple": false,
