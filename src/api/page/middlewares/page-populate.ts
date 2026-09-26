@@ -25,18 +25,30 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
                 'messagetitle',
                 'messagesubtitle',
                 'message',
-               
               ],
             },
           },
         },
 
-          // Contact block
+        // Contact block
         'blocks.contact': {
           fields: ['address', 'map', 'email', 'phone'],
         },
 
-
+        // Hero / Introduction block
+        'blocks.hero-text': {
+          populate: {
+            hero: {
+              populate: {
+                backgroundImage: {
+                  fields: ['url', 'alternativeText', 'name', 'width', 'height'],
+                },
+              },
+              fields: ['title', 'subtitle', 'summary', 'ctaText', 'ctaUrl'],
+            },
+          },
+          fields: ['heading', 'subheading', 'summary', 'description'],
+        },
       },
     },
   };

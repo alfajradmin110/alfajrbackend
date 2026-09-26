@@ -18,7 +18,8 @@
       "type": "dynamiczone",
       "components": [
         "blocks.message",
-        "blocks.contact"
+        "blocks.contact",
+        "blocks.hero-text"
       ]
     }
   }
