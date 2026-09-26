@@ -38,7 +38,7 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
         // Hero / Introduction block
         'blocks.hero-text': {
           populate: {
-            hero: {
+            Hero: {
               populate: {
                 backgroundImage: {
                   fields: ['url', 'alternativeText', 'name', 'width', 'height'],
