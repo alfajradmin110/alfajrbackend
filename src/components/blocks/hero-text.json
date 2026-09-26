@@ -8,7 +8,7 @@
     "Hero": {
       "type": "component",
       "component": "shared.hero",
-      "repeatable": true
+      "repeatable": false
     },
     "heading": {
       "type": "string"

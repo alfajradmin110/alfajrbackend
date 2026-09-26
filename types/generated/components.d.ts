@@ -79,7 +79,7 @@ export interface BlocksHeroText extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.RichText;
     heading: Schema.Attribute.String;
-    Hero: Schema.Attribute.Component<'shared.hero', true>;
+    Hero: Schema.Attribute.Component<'shared.hero', false>;
     subheading: Schema.Attribute.String;
     summary: Schema.Attribute.Text;
   };
