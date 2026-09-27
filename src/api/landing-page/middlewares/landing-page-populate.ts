@@ -90,6 +90,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
                 "organization",
                 "messagetitle",
                 "messagesubtitle",
+                "summary",
                 "message",
               ],
             },
