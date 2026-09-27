@@ -49,6 +49,27 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
           },
           fields: ['heading', 'subheading', 'summary', 'description'],
         },
+
+        // Downloads / vital links block — list of titled files
+        'blocks.downloads': {
+          populate: {
+            Downloads: {
+              populate: {
+                file: {
+                  fields: [
+                    'url',
+                    'alternativeText',
+                    'name',
+                    'ext',
+                    'size',
+                    'mime',
+                  ],
+                },
+              },
+              fields: ['title'],
+            },
+          },
+        },
       },
     },
   };

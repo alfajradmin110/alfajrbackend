@@ -55,6 +55,17 @@ export interface BlocksContact extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksDownloads extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_downloads';
+  info: {
+    displayName: 'Downloads';
+    icon: 'filePdf';
+  };
+  attributes: {
+    Downloads: Schema.Attribute.Component<'shared.downloads', true>;
+  };
+}
+
 export interface BlocksFeatures extends Struct.ComponentSchema {
   collectionName: 'components_blocks_features';
   info: {
@@ -206,6 +217,18 @@ export interface SharedAccordion extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedDownloads extends Struct.ComponentSchema {
+  collectionName: 'components_shared_downloads';
+  info: {
+    displayName: 'Downloads';
+    icon: 'filePdf';
+  };
+  attributes: {
+    file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -224,7 +247,7 @@ export interface SharedHero extends Struct.ComponentSchema {
 export interface SharedIcons extends Struct.ComponentSchema {
   collectionName: 'components_shared_icons';
   info: {
-    displayName: 'icons';
+    displayName: 'Icons';
     icon: 'link';
   };
   attributes: {
@@ -261,6 +284,7 @@ declare module '@strapi/strapi' {
       'blocks.announcement': BlocksAnnouncement;
       'blocks.banner': BlocksBanner;
       'blocks.contact': BlocksContact;
+      'blocks.downloads': BlocksDownloads;
       'blocks.features': BlocksFeatures;
       'blocks.hero-text': BlocksHeroText;
       'blocks.highlights': BlocksHighlights;
@@ -272,6 +296,7 @@ declare module '@strapi/strapi' {
       'layout.header': LayoutHeader;
       'layout.menu': LayoutMenu;
       'shared.accordion': SharedAccordion;
+      'shared.downloads': SharedDownloads;
       'shared.hero': SharedHero;
       'shared.icons': SharedIcons;
       'shared.link': SharedLink;

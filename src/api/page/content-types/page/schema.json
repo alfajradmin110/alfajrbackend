@@ -19,7 +19,8 @@
       "components": [
         "blocks.message",
         "blocks.contact",
-        "blocks.hero-text"
+        "blocks.hero-text",
+        "blocks.downloads"
       ]
     }
   }

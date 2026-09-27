@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_downloads",
+  "info": {
+    "displayName": "Downloads",
+    "icon": "filePdf"
+  },
+  "options": {},
+  "attributes": {
+    "Downloads": {
+      "type": "component",
+      "component": "shared.downloads",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
