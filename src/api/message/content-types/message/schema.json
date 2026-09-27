@@ -30,6 +30,9 @@
     "messagesubtitle": {
       "type": "string"
     },
+    "summary": {
+      "type": "text"
+    },
     "message": {
       "type": "richtext"
     },
