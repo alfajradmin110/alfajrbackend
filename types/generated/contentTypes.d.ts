@@ -791,7 +791,7 @@ export interface ApiShortCourseShortCourse extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks;
+    description: Schema.Attribute.RichText;
     duration: Schema.Attribute.String;
     education_levels: Schema.Attribute.Relation<
       'manyToMany',

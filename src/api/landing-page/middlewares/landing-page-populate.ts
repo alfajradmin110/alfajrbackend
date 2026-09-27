@@ -120,6 +120,7 @@ export default (config: any, { strapi }: { strapi: any }) => {
               },
               fields: [
                 "title",
+                "slug",
                 "summary",
                 "duration",
                 "isFeatured",

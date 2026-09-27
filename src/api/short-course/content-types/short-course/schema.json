@@ -22,7 +22,7 @@
       "type": "text"
     },
     "description": {
-      "type": "blocks"
+      "type": "richtext"
     },
     "education_levels": {
       "type": "relation",
