@@ -25,5 +25,8 @@ export default ({ env }: { env: (key: string) => string }) => ({
     },
   },
   // ...
+   seo: {
+    enabled: true,
+ },
   
 });

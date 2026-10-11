@@ -70,6 +70,22 @@ export default (config: any, { strapi }: { strapi: Core.Strapi }) => {
             },
           },
         },
+
+        'shared.seo': {
+          populate: {
+            metaImage: {
+              fields: ['url', 'alternativeText', 'width', 'height'],
+            },
+            metaSocial: {
+              populate: {
+                image: {
+                  fields: ['url', 'alternativeText', 'width', 'height'],
+                },
+              },
+            },
+          },
+        },
+
       },
     },
   };

@@ -268,6 +268,57 @@ export interface SharedLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedMetaSocial extends Struct.ComponentSchema {
+  collectionName: 'components_shared_meta_socials';
+  info: {
+    displayName: 'metaSocial';
+    icon: 'project-diagram';
+  };
+  attributes: {
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 65;
+      }>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    socialNetwork: Schema.Attribute.Enumeration<['Facebook', 'Twitter']> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+  };
+}
+
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'seo';
+    icon: 'search';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.String;
+    keywords: Schema.Attribute.Text;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+        minLength: 50;
+      }>;
+    metaImage: Schema.Attribute.Media<'images'>;
+    metaRobots: Schema.Attribute.String;
+    metaSocial: Schema.Attribute.Component<'shared.meta-social', true>;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    metaViewport: Schema.Attribute.String;
+    structuredData: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedTags extends Struct.ComponentSchema {
   collectionName: 'components_shared_tags';
   info: {
@@ -300,6 +351,8 @@ declare module '@strapi/strapi' {
       'shared.hero': SharedHero;
       'shared.icons': SharedIcons;
       'shared.link': SharedLink;
+      'shared.meta-social': SharedMetaSocial;
+      'shared.seo': SharedSeo;
       'shared.tags': SharedTags;
     }
   }

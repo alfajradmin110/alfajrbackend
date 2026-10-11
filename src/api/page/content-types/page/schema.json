@@ -20,7 +20,8 @@
         "blocks.message",
         "blocks.contact",
         "blocks.hero-text",
-        "blocks.downloads"
+        "blocks.downloads",
+        "shared.seo"
       ]
     }
   }

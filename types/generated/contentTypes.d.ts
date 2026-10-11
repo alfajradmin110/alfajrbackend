@@ -701,6 +701,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.contact',
         'blocks.hero-text',
         'blocks.downloads',
+        'shared.seo',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
